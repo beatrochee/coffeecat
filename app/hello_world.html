@@ -1,7 +1,7 @@
 <label>Name:</label>
 <!-- data-bind to the input element; store value in yourName -->
-<input type="text" [(ngModel)]="yourName" placeholder="Enter a name here">
+<input type="text" [(ngModel)]="yourName" placeholder="Enter a name here" #colorInput>
 <hr>
 <!-- conditionally display `yourName` -->
 <h1 [hidden]="!yourName">Hello {{yourName}}!</h1>
-
+<h1 [ngStyle]="{color: 'colorinput.value}"> This text will change color if you put a color instead of a name! </h1>
